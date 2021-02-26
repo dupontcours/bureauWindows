@@ -2,18 +2,17 @@
 stylesheet for windows module
 */
 
-div.window{
-  position: absolute;
-/*  overflow: auto;*/
+div.item-window{
+
   background-color: #eeefff;
   border: solid #0066aa 2px;
-  margin: 8px;
-  padding: 0px;
-  width: 420px;
-  height: 280px;
+  width:50vw;
+  margin: auto;
+  padding-bottom:2vh;
+  overflow-y:scroll;
 }
 
-div.titlebar{
+div.item-titlebar{
   background-color: #0066aa;
   background-image: url(images/titlebar_bg.png);
   background-repeat: repeat-x;
@@ -29,7 +28,7 @@ span.titleButton{
   height: 16px;
   width: 16px;
   padding: 0px;
-  margin: 0px 1px; 0px 1px;
+  margin: 0px 1px 0px 1px;
   float:right;
 }
 
@@ -50,16 +49,18 @@ span.titleButton#close{
   background: transparent url(images/close.png) top left no-repeat;
 }
 
-div.contents {
+div.item-content {
   background-color: #e0e4e8;
   overflow: auto;
   padding: 2px;
-  height:240px;
+
 }
 
 div.item{
-  float: left;
-  position : relative;
+ 
+  float: left; 
+  overflow: hidden;
+  position : relative; 
   height: 80px;
   width: 56px;
   color : #004488;
@@ -68,34 +69,40 @@ div.item{
   margin: 4px;
 }
 
-div.item div.itemName{
-  margin-bottom: 0px;
+div.item-name{
   font: 10px verdana, arial, helvetica;
   text-align: center;
   position: relative;
   top: 50px;
 }
 
-div.item div.itemName a,a{cursor: help;text-decoration: none;}
+a{
+  cursor: help;
+  text-decoration: none;
 
+}
 
-div.folder{
+a>div {
+  height:50px;
+}
+
+.item-folder{
   background: transparent url(images/folder.png) top left no-repeat;
 }
 
-div.file{
+.item-file{
   background: transparent url(images/file.png) top left no-repeat;
 }
 
-div.special{
+.item-special{
   background: transparent url(images/folder_important.png) top left no-repeat;
 }
-div.word{
+.item-word{
   background: transparent url(images/word.png) top left no-repeat;
 }
-div.ppt{
+.item-ppt{
   background: transparent url(images/ppt.png) top left no-repeat;
 }
-div.pdf{
+.item-pdf{
   background: transparent url(images/pdf.png) top left no-repeat;
 }
